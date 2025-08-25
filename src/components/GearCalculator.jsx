@@ -4,6 +4,7 @@ import HeaderCenter from "./HeaderCenter";
 import HeaderRight from "./HeaderRight";
 import GearList from "./GearList";
 import GearEquipper from "./GearEquipper";
+import GearPresets from "./GearPresets";
 
 function GearCalculator() {
   return (
@@ -19,7 +20,8 @@ function GearCalculator() {
       </div>
       <GearList />
       <GearEquipper />
-      {/* presets, and footer will go here */}
+      <GearPresets />
+      {/* footer will go here */}
     </div>
   );
 }
