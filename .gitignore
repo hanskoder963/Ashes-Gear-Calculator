@@ -7,9 +7,16 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Node/Vite
+node_modules/
+dist/
+
+# Local data dumps
+/data/*.json
+
+# Keep the folder but ignore dumps
+!/data/README.md
+
 *.local
 
 # Editor directories and files
@@ -25,3 +32,7 @@ dist-ssr
 
 # Lokale backup- og referansemapper
 temp-old-site/
+
+# Ashes API dumps (ikke committ)
+data/ashescodex_items.json
+.ashescodex_dump.state.json

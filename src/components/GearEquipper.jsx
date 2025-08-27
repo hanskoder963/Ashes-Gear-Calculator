@@ -25,26 +25,56 @@ const rightSlots = [
   { id: "ring2", img: "media/ring.webp" },
 ];
 
-function GearEquipper() {
+function GearEquipper({ onSlotClick }) {
   return (
     <section className="gear-equipper">
       <div className="left-column">
         {leftSlots.map((slot) => (
-          <div className="slot" id={slot.id} key={slot.id}>
+          <div
+            className="slot"
+            id={slot.id}
+            key={slot.id}
+            onClick={() => onSlotClick?.(slot.id)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") onSlotClick?.(slot.id);
+            }}
+          >
             <img src={`${import.meta.env.BASE_URL}${slot.img}`} alt={slot.id} />
           </div>
         ))}
       </div>
       <div className="bottom-row">
         {bottomRowSlots.map((slot) => (
-          <div className="slot" id={slot.id} key={slot.id}>
+          <div
+            className="slot"
+            id={slot.id}
+            key={slot.id}
+            onClick={() => onSlotClick?.(slot.id)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") onSlotClick?.(slot.id);
+            }}
+          >
             <img src={`${import.meta.env.BASE_URL}${slot.img}`} alt={slot.id} />
           </div>
         ))}
       </div>
       <div className="right-column">
         {rightSlots.map((slot) => (
-          <div className="slot" id={slot.id} key={slot.id}>
+          <div
+            className="slot"
+            id={slot.id}
+            key={slot.id}
+            onClick={() => onSlotClick?.(slot.id)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") onSlotClick?.(slot.id);
+            }}
+          >
             <img src={`${import.meta.env.BASE_URL}${slot.img}`} alt={slot.id} />
           </div>
         ))}
